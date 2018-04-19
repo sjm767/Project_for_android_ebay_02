@@ -4,15 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="proj.jaeshim.project_for_android_ebay_02.MainActivity">
+    tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvLotto"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@id/etLottoNo"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btQueryLotto"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:text="로또 조회"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <EditText
+        android:id="@+id/etLottoNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="로또 회차"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="457dp"
+        app:layout_constraintBottom_toBottomOf="@id/btQueryLotto"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btQueryLotto"
+        app:layout_constraintTop_toTopOf="@id/btQueryLotto"/>
 
 </android.support.constraint.ConstraintLayout>
